@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <title>Synth User_Profile</title>
 </head>
 <body class="page__body">
@@ -75,11 +75,11 @@
               <span class="visually-hidden">Open profile menu</span>
             </button>
             <ul class="menu__block menu__block--opened">
-              <li class="menu__option menu__option--report menu__option--active">
-                <button class="menu__button" type="button">Report User</button>
+              <li class="menu__option  menu__option--active">
+                <button class="menu__button menu__button--report menu__button--active" type="button">Report User</button>
               </li>
-              <li class="menu__option menu__option--block">
-                <button class="menu__button" type="button">Block User</button>
+              <li class="menu__option">
+                <button class="menu__button menu__button--block" type="button">Block User</button>
               </li>
             </ul>
           </div>
@@ -185,19 +185,6 @@
       </div>
     </section>
   </main>
-  <script>
-    var navMain = document.querySelector('.menu__block');
-    var navToggle = document.querySelector('.menu__toggle');
-
-    navMain.classList.remove('menu__block--opened');
-
-    navToggle.addEventListener('click', function() {
-      if (navMain.classList.contains('menu__block--opened')) {
-        navMain.classList.remove('menu__block--opened');
-      } else {
-        navMain.classList.add('menu__block--opened');
-      }
-    });
-  </script>
+  <script src="js/script.min.js"></script>
 </body>
 </html>

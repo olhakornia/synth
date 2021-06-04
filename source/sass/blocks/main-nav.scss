@@ -24,6 +24,10 @@
   color: rgba(62, 64, 86, 0.6);
   text-transform: uppercase;
 
+  &:hover {
+    color: rgba(62, 64, 86, 1);
+  }
+
   &--active {
     color: rgba(62, 64, 86, 1);
 

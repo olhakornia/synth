@@ -12,7 +12,7 @@
 
   @media (min-width: $tablet) {
     right: 20px;
-    top: -8px;
+    top: 0;
   }
 
   &::before {
@@ -27,6 +27,10 @@
     background-color: #3E4056;
     box-shadow: 0 6px 0 0 #3E4056, 0 12px 0 0 #3E4056;
   }
+
+  &:hover {
+    opacity: 60%;
+  }
 }
 
 .menu__block {
@@ -39,22 +43,38 @@
   width: 176px;
   min-height: 124px;
   padding: 24px 0;
-  top: 28px;
+  top: 40px;
   right: -138px;
 
   background-color: #ffffff;
   opacity: 94%;
   border-radius: 10px;
   box-shadow: 0 24px 40px -36px #B2B3BB;
+
+  @media (max-width: $mobile-only) {
+    top: -35px;
+    right: 0;
+  }
 }
 
 .menu__option {
-  position: relative;
-  padding: 8px 20px 8px 60px;
-
   &--active {
     background-color: #ECF1F8;
   }
+}
+
+.menu__button {
+  position: relative;
+  display: block;
+  padding: 8px 20px 8px 60px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -77,16 +97,8 @@
       background-image: url("../img/icon_block.svg");
     }
   }
-}
 
-.menu__button {
-  display: block;
-  padding: 0;
-  margin: 0;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 22px;
-
-  border: none;
-  background-color: transparent;
+  &:hover:not(.menu__button--active) {
+    opacity: 60%;
+  }
 }

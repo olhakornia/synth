@@ -1,9 +1,11 @@
 .profile {
+  padding-top: 30px;
+
   @media (min-width: $tablet) {
+    padding-top: 0;
     flex-shrink: 0;
     width: 300px;
     margin-right: 24px;
-    padding-top: 74px;
   }
 
   @media (min-width: $desktop) {
@@ -88,6 +90,10 @@
     left: 0;
     bottom: 0;
     background-image: url("../img/edit.svg");
+  }
+
+  &:hover {
+    opacity: 60%;
   }
 }
 

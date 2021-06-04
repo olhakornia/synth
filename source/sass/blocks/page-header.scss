@@ -1,8 +1,10 @@
 .page-header {
-  margin-top: 10px;
-  padding: 10px 0 10px 0;
+  padding-top: 20px;
   background-color: #fff;
   box-shadow: 0 5px 25px -15px #B2B3BB;
+
+  @media (min-width: $tablet) {
+  }
 }
 
 .page-header__wrap {
