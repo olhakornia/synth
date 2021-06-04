@@ -8,7 +8,6 @@ const csso = require("postcss-csso");
 const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
 const terser = require("gulp-terser");
-const imagemin = require("gulp-imagemin");
 const del = require("del");
 const sync = require("browser-sync").create();
 
@@ -50,27 +49,6 @@ const scripts = () => {
 }
 
 exports.scripts = scripts;
-
-// Images
-
-const optimizeImages = () => {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
-    .pipe(imagemin([
-      imagemin.mozjpeg({progressive: true}),
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.svgo()
-    ]))
-    .pipe(gulp.dest("build/img"))
-}
-
-exports.images = optimizeImages;
-
-const copyImages = () => {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
-    .pipe(gulp.dest("build/img"))
-}
-
-exports.images = copyImages;
 
 // Copy
 
@@ -140,11 +118,9 @@ exports.build = build;
 
 // Default
 
-
 exports.default = gulp.series(
   clean,
   copy,
-  copyImages,
   gulp.parallel(
     styles,
     html,
