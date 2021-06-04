@@ -1,0 +1,92 @@
+.menu__toggle {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  @media (min-width: $tablet) {
+    right: 20px;
+    top: -8px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-color: #3E4056;
+    box-shadow: 0 6px 0 0 #3E4056, 0 12px 0 0 #3E4056;
+  }
+}
+
+.menu__block {
+  display: none;
+}
+
+.menu__block--opened {
+  display: block;
+  position: absolute;
+  width: 176px;
+  min-height: 124px;
+  padding: 24px 0;
+  top: 28px;
+  right: -138px;
+
+  background-color: #ffffff;
+  opacity: 94%;
+  border-radius: 10px;
+  box-shadow: 0 24px 40px -36px #B2B3BB;
+}
+
+.menu__option {
+  position: relative;
+  padding: 8px 20px 8px 60px;
+
+  &--active {
+    background-color: #ECF1F8;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &--report {
+    &::before {
+      background-image: url("../img/icon_report.svg");
+    }
+  }
+
+  &--block {
+    &::before {
+      background-image: url("../img/icon_block.svg");
+    }
+  }
+}
+
+.menu__button {
+  display: block;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+
+  border: none;
+  background-color: transparent;
+}

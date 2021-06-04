@@ -1,0 +1,79 @@
+.user {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @media(min-width: $tablet) {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+}
+
+.user__name {
+  font-size: 16px;
+  line-height: 20px;
+  color: $text-color;
+  text-align: right;
+
+  span {
+    display: block;
+  }
+
+  @media (max-width: $mobile-only) {
+    order: 2;
+  }
+
+  @media (min-width: $tablet) {
+    padding-top: 5px;
+
+    span {
+      display: inline;
+    }
+  }
+}
+
+.user__img {
+  @media (max-width: $mobile-only) {
+    order: 1;
+  }
+  margin-left: 20px;
+}
+
+.user__menu-toggle {
+  width: 16px;
+  height: 16px;
+  margin-left: 13px;
+  cursor: pointer;
+  border: none;
+
+  background-color: transparent;
+  background-image: url("../img/arrow.svg");
+
+  @media (max-width: $mobile-only) {
+    order: 3;
+  }
+}
+
+.user__action-button {
+  position: absolute;
+  display: block;
+  width: 64px;
+  height: 64px;
+  right: 0;
+  bottom: -35%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, $gradient1 0%, $gradient2 100%);
+
+  img {
+    position: absolute;
+    display: block;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
