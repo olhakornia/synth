@@ -55,6 +55,7 @@ exports.scripts = scripts;
 const copy = (done) => {
   gulp.src([
     "source/img/**/*.svg",
+    "source/img/**/*.png",
   ], {
     base: "source"
   })
